@@ -1,8 +1,11 @@
 const greetings = "hi";
 let name = "david";
 
+// greetings = "what's up";
+// console.log(greetings + "can const be changed? no");
+
 console.log(greetings + " my name is " + name);
-alert(greetings + " my name is " + name);
+// alert(greetings + " my name is " + name);
 
 name = "HJ :)";
 console.log(greetings + " my name is " + name);
@@ -10,7 +13,7 @@ console.log(greetings + " my name is " + name);
 arr = [1, 2, 3, 4, 5, "yes"];
 arr.push(name);
 console.log(arr);
-alert(arr);
+// alert(arr);
 
 const person = {
   name: "kevin",
@@ -20,7 +23,7 @@ const person = {
   saySomething: function (speech) {
     tmp = "Hi so last weekend was awesome! you are not gonna believe it! so..";
     console.log(tmp);
-    alert(tmp);
+    // alert(tmp);
   },
 };
 person.saySomething();
@@ -33,5 +36,11 @@ console.log(
     person.gender
 );
 
-greetings = "what's up";
-console.log(greetings + "can const be changed? no");
+const age = parseInt(prompt("insert your age"));
+console.log(typeof age);
+32;
+if (isNaN(age)) {
+  alert("the inserted age is not a number: " + age);
+} else {
+  alert("the inserted age is " + age);
+}
