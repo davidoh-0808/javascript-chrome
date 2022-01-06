@@ -15,13 +15,25 @@ const p = document.querySelector(".paragraph h4"); //querySelectorAll
 const pContent = p.textContent.trim();
 
 // Event Listener
-p.addEventListener("click", clickElement);
-p.addEventListener("mouseleave", mouseLeave);
-function clickElement() {
+p.addEventListener("click", handleClick);
+p.addEventListener("copy", handleCopy);
+p.addEventListener("mouseleave", handleMouseLeave);
+window.addEventListener("resize", handleWindowResize);
+
+function handleClick() {
   p.style.color = "lime";
+  p.innerText = "text is clicked!";
   console.log(`The element ${pContent} is clicked`);
 }
-function mouseLeave() {
+function handleCopy() {
+  alert(`${p.innerText} copied!`);
+}
+function handleMouseLeave() {
   p.style.color = "black";
+  p.innerText = "mouse has left the text!";
   console.log("The mouse has left the element");
+}
+function handleWindowResize() {
+  document.body.style.backgroundColor = "orange";
+  console.log(window.event);
 }
