@@ -16,16 +16,13 @@ const pContent = p.textContent.trim();
 
 // Event Listener
 p.addEventListener("click", handleClick);
+
+/*
 p.addEventListener("copy", handleCopy);
 p.addEventListener("mouseenter", handleMouseEnter);
 p.addEventListener("mouseleave", handleMouseLeave);
 window.addEventListener("resize", handleWindowResize);
 
-function handleClick() {
-  p.style.color = "lime";
-  p.innerText = "text is clicked!";
-  console.log(`The element ${pContent} is clicked`);
-}
 function handleCopy() {
   alert(`${p.innerText} copied!`);
 }
@@ -42,4 +39,15 @@ function handleMouseLeave() {
 function handleWindowResize() {
   document.body.style.backgroundColor = "orange";
   console.log(window.event);
+}
+*/
+function handleClick() {
+  let condition = "clicked";
+  if (p.className === condition) {
+    p.className = "";
+    p.innerText = "paragraph";
+  } else {
+    p.className = condition;
+    p.innerText = "text is clicked";
+  }
 }
