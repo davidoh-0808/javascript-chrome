@@ -13,7 +13,3 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 1000);
-
-let aString = "12301230123";
-aString = parseInt(aString);
-console.log(typeof aString);
