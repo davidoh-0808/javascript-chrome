@@ -40,7 +40,6 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos) {
   const parsedToDos = JSON.parse(savedToDos);
-  console.log(parsedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
